@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Send Google Analytics data to Graphite
  * Copyright (c) 2015, Peter Hedenskog
