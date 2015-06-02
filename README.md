@@ -15,15 +15,23 @@ Metrics that you can fetch is the one in the Google Analytics API:
 https://developers.google.com/analytics/devguides/reporting/core/dimsmets
 
 ## Install
+```
 npm install -g gatographite
+```
 
 ## Run
 
+```
 // Fetch data from yesterday and send to Graphite
 gatographite
+```
 
-// Fetch data from three days back and send to Graphite
+```
+// Fetch data from three days back -> today and send to Graphite
 gatographite 3
+```
 
+```
 // Send data for a specific date
 gatographite 2015-06-01
+```
