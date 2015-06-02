@@ -1,0 +1,32 @@
+{
+  "name": "gatographite",
+  "version": "0.0.1",
+  "description": "Fetch Google Analytics statistics and send them to Graphite",
+  "main": "./lib/gaToGraphite.js",
+  "bin": "./bin/start.js",
+  "engines": {
+    "node": ">=0.10.7"
+  },
+  "scripts": {
+    "start": "node lib/app.js",
+    "lint": "eslint .",
+    "test": "mocha",
+    "travis": "npm run lint"
+  },
+  "devDependencies": {
+    "eslint": "0.17.1"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Peter Hedenskog",
+    "url": "http://www.peterhedenskog.com"
+  },
+  "devDependencies": {
+    "eslint": "0.17.1"
+  },
+  "dependencies": {
+    "googleapis": "2.0.4",
+    "minimist":"1.1.0",
+    "moment":"2.10.3"
+  }
+}
