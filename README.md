@@ -1,5 +1,7 @@
 # Push Google Analytics data to Graphite
 
+[![Build status][travis-image]][travis-url]
+
 Fetch your Google Analytics data and send it to Graphite, massive love to  https://github.com/etsy/GoogleAnalyticsToGraphite for inspiration.
 
 This is a work in progress and when it is finished, I'll wrap the functionality on a Docker container.
@@ -35,3 +37,6 @@ gatographite 3
 // Send data for a specific date
 gatographite 2015-06-01
 ```
+
+[travis-image]: https://img.shields.io/travis/soulgalore/gatographite.svg?style=flat-square
+[travis-url]: https://travis-ci.org/soulgalore/gatographite
