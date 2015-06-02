@@ -7,6 +7,14 @@
   "engines": {
     "node": ">=0.10.7"
   },
+  "keywords": [
+    "google",
+    "analytics",
+    "ga",
+    "graphite",
+    "metrics",
+    "rum"
+  ],
   "scripts": {
     "start": "node lib/app.js",
     "lint": "eslint .",
