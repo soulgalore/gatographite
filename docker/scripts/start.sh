@@ -9,7 +9,7 @@ date
 # Get the email address from Google Analytics
 export GA_EMAIL=thesupersecretemailcode@developer.gserviceaccount.com
 # And the full path to the PEM file
-export GA_PEM_PATH=/full/path/to/my.pem
+export GA_PEM_PATH=/home/root/my.pem
 # Choose which metrics to send. You can probably use
 # this list https://developers.google.com/analytics/devguides/reporting/core/dimsmets
 export GA_METRICS=ga:pageviews,ga:sessions,ga:avgTimeOnSite

@@ -25,6 +25,7 @@ RUN npm install -g pangyp\
 RUN npm install gatographite -g
 
 ADD ./scripts/ /home/root/scripts
+ADD ./empty.pem /home/root/my.pem
 
 ENTRYPOINT ["/home/root/scripts/start.sh"]
 
