@@ -1,6 +1,8 @@
 # Fetch metrics from Google Analytics and send to Graphite
 
-Container for fetching metrics from Google Analytics and send them to Graphite. This is perfect if you want to correlate your metrics from sitespeed.io with page views or even RUM data.
+Container for fetching metrics from Google Analytics and send them to Graphite. This is perfect if you want to correlate your metrics from sitespeed.io with page views or even RUM data. Massive love to https://github.com/etsy/GoogleAnalyticsToGraphite for inspiration.
+
+
 
 Google API version 3 is used and it is some work to get the auth and setup to work:
 
@@ -25,17 +27,20 @@ export GA_METRICS=ga:pageviews,ga:sessions,ga:avgTimeOnSite,ga:domContentLoadedT
 
 ## Run
 
+### Fetch data from yesterday and send to Graphite
 <pre>
-// Fetch data from yesterday and send to Graphite
 docker run --rm -v "$(pwd)"/my.pem:/home/root/my.pem -v "$(pwd)"/env.sh:/home/root/scripts/env.sh test/test gatographite
 </pre>
 
+### Fetch data from three days back -> today and send to Graphite
 <pre>
-// Fetch data from three days back -> today and send to Graphite
 docker run --rm -v "$(pwd)"/my.pem:/home/root/my.pem -v "$(pwd)"/env.sh:/home/root/scripts/env.sh test/test gatographite 3
 </pre>
 
+###  Send data for a specific date
 <pre>
-// Send data for a specific date
 docker run --rm -v "$(pwd)"/my.pem:/home/root/my.pem -v "$(pwd)"/env.sh:/home/root/scripts/env.sh test/test gatographite 2015-06-01
 </pre>
+
+## Running on Mac
+Do you get an error like <code>Error: invalid_grant</code>? It's because the clock in Docker is not synced between your container and your Mac. Easiest solution is to stop and start boot2docker and run again.
