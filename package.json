@@ -1,6 +1,6 @@
 {
   "name": "gatographite",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Fetch Google Analytics statistics and send them to Graphite",
   "main": "./lib/gaToGraphite.js",
   "bin": "./bin/start.js",
