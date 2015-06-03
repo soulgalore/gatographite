@@ -1,5 +1,10 @@
 # CHANGELOG 
 
+version 0.1.0
+------------------------
+* Bug fix: You can now choose dates back in time and it works :)
+* Added help in the CLI. 
+
 version 0.0.6
 ------------------------
 * bug fix: dates was again converted wrong and sent to Graphite
