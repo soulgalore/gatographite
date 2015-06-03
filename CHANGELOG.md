@@ -1,4 +1,12 @@
-# CHANGELOG - 
+# CHANGELOG 
+ 
+version 0.0.5
+------------------------
+* date fix: now the dates are sent correctly to Graphite
+
+version 0.0.4
+------------------------
+* Ooops released with some extra files, now removed.
 
 version 0.0.3
 ------------------------
