@@ -1,4 +1,8 @@
 # CHANGELOG 
+
+version 0.0.6
+------------------------
+* bug fix: dates was again converted wrong and sent to Graphite
  
 version 0.0.5
 ------------------------
