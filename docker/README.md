@@ -30,7 +30,7 @@ export GA_METRICS=ga:pageviews,ga:sessions,ga:avgTimeOnSite,ga:domContentLoadedT
 
 ### Fetch data from yesterday and send to Graphite
 ```
-docker run --rm -v "$(pwd)"/my.pem:/home/root/my.pem -v "$(pwd)"/env.sh:/home/root/scripts/env.sh sitespeedio/gatographite gatographite
+docker run --rm -v /path/to/my.pem:/home/root/my.pem -v "/path/to/env.sh:/home/root/scripts/env.sh sitespeedio/gatographite gatographite
 ```
 
 ### Fetch data from three days back -> yesterday and send to Graphite
