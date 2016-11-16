@@ -28,6 +28,12 @@ ADD ./scripts/ /home/root/scripts
 RUN chmod +x /home/root/scripts/*
 ADD ./empty.pem /home/root/my.pem
 
+ENV GA_EMAIL=thesupersecretemailcode@developer.gserviceaccount.com
+ENV GA_METRICS=ga:pageviews,ga:sessions,ga:avgTimeOnSite
+ENV GA_VIEW_ID=YOUR_VIEW_ID
+ENV GRAPHITE_HOST=YOUR_GRAPHITE_HOST
+ENV GRAPHITE_PORT=2003
+
 ENTRYPOINT ["/home/root/scripts/start.sh"]
 
 RUN apt-get update \
