@@ -16,6 +16,12 @@ docker run --rm -v /path/to/my.pem:/home/root/my.pem -v /path/to/env.sh:/home/ro
 ## Configuration
 You can either feed the script with params or add your values to the env.sh file. Easiest using Docker is just to configure env.sh.
 
+GA_EMAIL, GA_METRICS, GA_VIEW_ID, GRAPHITE_HOST and GRAPHITE_PORT are all environment variables that can be passed in via the docker run command.
+
+```
+docker run --rm -v /path/to/my.pem:/home/root/my.pem -v /path/to/env.sh:/home/root/scripts/env.sh -e GA_EMAIL=someone@gmail.com -e GA_METRICS=GA_METRICS=ga:pageviews,ga:sessions,ga:avgTimeOnSite,ga:domContentLoadedTime -e GA_VIEW_ID=yourviewid -e GRAPHITE_HOST=graphite -e GRAPHITE_PORT=2003 sitespeedio/gatographite gatographite
+```
+
 ### Choosing which data to fetch
 Metrics that you can fetch is the one in the Google Analytics API:
 [https://developers.google.com/analytics/devguides/reporting/core/dimsmets](https://developers.google.com/analytics/devguides/reporting/core/dimsmets)

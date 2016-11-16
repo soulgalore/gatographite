@@ -28,6 +28,22 @@ ADD ./scripts/ /home/root/scripts
 RUN chmod +x /home/root/scripts/*
 ADD ./empty.pem /home/root/my.pem
 
+# Get the email address from Google Analytics
+ENV GA_EMAIL=thesupersecretemailcode@developer.gserviceaccount.com
+# Choose which metrics to send. You can probably use		
+# this list https://developers.google.com/analytics/devguides/reporting/core/dimsmets
+ENV GA_METRICS=ga:pageviews,ga:sessions,ga:avgTimeOnSite
+# The view id on your Google Analytics account
+ENV GA_VIEW_ID=YOUR_VIEW_ID
+# The hostname of your Graphite instance
+ENV GRAPHITE_HOST=YOUR_GRAPHITE_HOST
+# Graphite port
+ENV GRAPHITE_PORT=2003
+# Want to export data based per minute?
+ENV GA_MINUTES=false
+# Maximum number of results from GA
+ENV GA_MAX_RESULTS=1000
+
 ENTRYPOINT ["/home/root/scripts/start.sh"]
 
 RUN apt-get update \
